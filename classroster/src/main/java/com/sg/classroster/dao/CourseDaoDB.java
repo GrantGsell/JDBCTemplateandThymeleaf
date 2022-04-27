@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.sg.classroster.dto;
+package com.sg.classroster.dao;
 
+import com.sg.classroster.dao.CourseDao;
+import com.sg.classroster.dto.Course;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -16,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sg.classroster.dto.Teacher;
 import com.sg.classroster.dto.Student;
+import com.sg.classroster.dto.Teacher;
 
 /**
  *

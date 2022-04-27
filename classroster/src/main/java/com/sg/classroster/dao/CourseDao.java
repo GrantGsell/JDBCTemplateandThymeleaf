@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.sg.classroster.dto;
+package com.sg.classroster.dao;
 
+import com.sg.classroster.dto.Course;
+import com.sg.classroster.dto.Teacher;
 import java.util.List;
 
 /**
