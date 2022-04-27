@@ -5,6 +5,7 @@
 package com.sg.classroster.dao;
 
 import com.sg.classroster.dao.CourseDao;
+import com.sg.classroster.dao.StudentDaoImpl.StudentMapper;
 import com.sg.classroster.dto.Course;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,7 +17,6 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sg.classroster.dto.Teacher;
 import com.sg.classroster.dto.Student;
 import com.sg.classroster.dto.Teacher;
 
@@ -139,11 +139,6 @@ public class CourseDaoDB implements CourseDao {
                 new CourseMapper(), student.getId());
         associateTeacherAndStudents(courses);
         return courses;
-    }
-
-    @Override
-    public List<Course> getCoursesForStudent(Student student) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public static final class CourseMapper implements RowMapper<Course> {

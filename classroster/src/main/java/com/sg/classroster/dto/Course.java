@@ -26,6 +26,7 @@ public class Course {
         this.students=students;
     }
     
+    public Course() {}
     
     public void setId(int id) {
         this.id = id;
