@@ -64,4 +64,8 @@ public class Course {
         this.students = students;
     }
     
+    public List<Student> getStudents() {
+        return this.students;
+    }
+    
 }
