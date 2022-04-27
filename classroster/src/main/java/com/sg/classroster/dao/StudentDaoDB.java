@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author chica
  */
 @Repository
-public class StudentDaoImpl implements StudentDao {
+public class StudentDaoDB implements StudentDao {
 
     @Autowired
     JdbcTemplate jdbc;

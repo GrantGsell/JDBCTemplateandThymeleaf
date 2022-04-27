@@ -5,7 +5,7 @@
 package com.sg.classroster.dao;
 
 import com.sg.classroster.dao.CourseDao;
-import com.sg.classroster.dao.StudentDaoImpl.StudentMapper;
+import com.sg.classroster.dao.StudentDaoDB.StudentMapper;
 import com.sg.classroster.dto.Course;
 import java.sql.ResultSet;
 import java.sql.SQLException;
