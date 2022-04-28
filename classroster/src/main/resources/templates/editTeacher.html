@@ -41,6 +41,10 @@
                         <div class="col-9">
                             <input type="text" name="firstName" id="firstName" 
                                    class="form-control" th:value="${teacher.firstName}"/>
+                            <div th:if="${#fields.hasErrors('teacher.firstName')}">
+                                <p th:each="error : ${#fields.errors('teacher.firstName')}" class="alert alert-danger"
+                                   th:text="${error}"> Bad first name </p>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -49,6 +53,10 @@
                         <div class="col-9">
                             <input type="text" name="lastName" id="lastName" 
                                    class="form-control"  th:value="${teacher.lastName}"/>
+                            <div th:if="${#fields.hasErrors('teacher.lastName')}">
+                                <p th:each="error : ${#fields.errors('teacher.lastName')}" class="alert alert-danger"
+                                   th:text="${error}"> Bad last name </p>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -57,6 +65,10 @@
                         <div class="col-9">
                             <input type="text" name="specialty" id="specialty" 
                                    class="form-control" th:value="${teacher.specialty}">
+                            <div th:if="${#fields.hasErrors('teacher.specialty')}">
+                                <p th:each="error : ${#fields.errors('teacher.specialty')}" class="alert alert-danger"
+                                   th:text="${error}"> Bad specialty name </p>
+                            </div>
                         </div>
                     </div>
                     <input type="hidden" name="id" th:value="${teacher.id}"/>
