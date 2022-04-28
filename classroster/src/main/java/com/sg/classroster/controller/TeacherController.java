@@ -29,6 +29,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class TeacherController {
 
     Set<ConstraintViolation<Teacher>> violations = new HashSet<>();
+    Validator validate = Validation.buildDefaultValidatorFactory().getValidator();                                                                                                                                                     
+    
     
     @Autowired
             TeacherDao teacherDao;
@@ -58,7 +60,6 @@ public class TeacherController {
         teacher.setLastName(lastName);
         teacher.setSpecialty(specialty);
         
-        Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
         violations = validate.validate(teacher);
         
         if(violations.isEmpty()) {
@@ -95,6 +96,7 @@ public class TeacherController {
         teacher.setSpecialty(request.getParameter("specialty"));
         
         teacherDao.updateTeacher(teacher);
+        
         
         return "redirect:/teachers";
     }
