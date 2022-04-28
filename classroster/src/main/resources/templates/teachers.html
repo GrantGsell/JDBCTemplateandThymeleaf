@@ -48,8 +48,8 @@
                             <td th:text="${teacher.firstName}">Teacher First Name</td>
                             <td th:text="${teacher.lastName}">Teacher Last Name</td>
                             <td th:text="${teacher.specialty}">Teacher Specialty</td>
-                            <a href="#" th:href="@{/editTeacher(id=${teacher.id})}">Edit</a>
-                            <a href="#" th:href="@{/deleteTeacher(id=${teacher.id})}">Delete</a>
+                            <td><a href="#" th:href="@{/editTeacher(id=${teacher.id})}">Edit</a><td>
+                            <td><a href="#" th:href="@{/deleteTeacher(id=${teacher.id})}">Delete</a><td>
                         </tr>
                     </tbody>
                 </table>
