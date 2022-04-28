@@ -100,9 +100,7 @@ public class TeacherController {
         violations = validate.validate(teacher);
         
         if(violations.isEmpty())
-            teacherDao.addTeacher(teacher);  
-        else
-            return "editTeacher";
+            teacherDao.updateTeacher(teacher);
             
         return "redirect:/teachers";
     }
